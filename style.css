@@ -192,10 +192,11 @@ scrollbar-width: none;
 
 .enableBlur>*>* {
   filter: blur(20px);
+  transition: filter 0.5s;
 }
 
 .disableBlur {
-  filter: blur(0) saturate(1) !important;
+  filter: blur(0) !important;
 }
 .record-info__text__header{
   font-size: 2rem;
