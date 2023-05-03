@@ -15,7 +15,7 @@ body{
 /* body::-webkit-scrollbar {
   display: none;
 } */
-a {
+a, button {
   color: black !important; 
   text-decoration: none;
 }
