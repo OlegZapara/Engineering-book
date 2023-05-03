@@ -43,12 +43,12 @@
 }
 
 @media screen and (max-width: 600px){
-    body{
+    html{
         overflow-x: hidden;
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-        body::-webkit-scrollbar {
+        html::-webkit-scrollbar {
         display: none;
     }
 }
