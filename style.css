@@ -15,6 +15,10 @@ body{
 /* body::-webkit-scrollbar {
   display: none;
 } */
+a {
+  color: black !important; 
+  text-decoration: none;
+}
 
 
 .entry{
