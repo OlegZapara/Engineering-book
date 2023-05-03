@@ -24,7 +24,7 @@ for(let button of closeButtons){
 }
 
 function toggleInfo(e){
-  e.target.parentElement.parentElement.scrollIntoView({block: "center", behaviour:"smooth"})
+  e.target.parentElement.parentElement.querySelector('.record-info').scrollIntoView({block: "center", behaviour:"smooth"})
   e.target.parentElement.parentElement.parentElement.classList.add('enableBlur')
   e.target.parentElement.parentElement.querySelector('.record-info').classList.add('show-info')
   e.target.parentElement.parentElement.querySelector('.record-info').classList.add('disableBlur')
