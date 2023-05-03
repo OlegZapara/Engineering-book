@@ -1,0 +1,234 @@
+:root{
+  --margin: 2vw;
+  --index: calc(1vh + 1vw)
+}
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+  /* -ms-overflow-style: none;
+  scrollbar-width: none; */
+}
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+
+
+.entry{
+  height: 100vh;
+}
+.entry__image-wrapper{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.entry__image1{
+  position: absolute;
+  object-fit: cover;
+}
+.entry__image2{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.footer{
+  width: calc(100% - 20px);
+  color:grey;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin:10px;
+  text-align: right;
+  border-top: 1px solid grey;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.record{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+}
+.image-wrapper{
+  height: min(85vh, calc(50vw + 150px));
+  width: calc(50vw + 150px);
+  margin: var(--margin);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+}
+.image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: min(85vh, calc(50vw + 150px));
+  width: calc(100% - 50vw - 150px);
+  border-top: 4px solid black;
+  margin:var(--margin);
+  font-family: "Neue Haas Grotesk Text Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  word-spacing: normal;
+}
+.text__overlay{
+  position: absolute;
+  opacity: 1;
+  top:0;
+  background-color: white;
+  width: 100%;
+  height:100%;
+  z-index: 2;
+  transition: transform 1.5s ease-out;
+}
+.text__header{
+  font-size: calc(3*var(--index));
+  font-weight: 600;
+}
+.text_description{
+  font-size: calc(1.75*var(--index));
+}
+
+.text__additional{
+  border:4px solid black !important;
+  border-radius: 10px;
+  width: 350px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top:50px;
+  margin-left:20px
+}
+
+.date{
+  position: absolute;
+  top:-35px;
+  color:grey;
+  font-size: 20px;
+}
+.trigger{
+  position: absolute;
+  width: 100%;
+  top:30%;
+  height: 40%;
+}
+.hidden{
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.hidden .image{
+  transition: all 1s;
+  transform:scale(1.05);
+}
+.show{
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .image{
+  transform: scale(1);
+}
+
+.show .text__overlay{
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+
+.record-info{
+  position:absolute;
+  height: 105vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  overflow: hidden;
+}
+.hidden-info{
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+.show-info{
+  opacity: 1 !important;
+  z-index: 3 !important;
+}
+.record-info__image-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: calc(min(100vh, 100vw) - var(--margin));
+  width: 50vw;
+  margin: var(--margin);
+  overflow-y: scroll;
+}
+
+.record-info__image-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.record-info__image-wrapper {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+
+.record-info__image{
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.enableBlur>*>* {
+  filter: blur(20px);
+}
+
+.disableBlur {
+  filter: blur(0) saturate(1) !important;
+}
+.record-info__text__header{
+  font-size: 2rem;
+}
+.record-info__text__description{
+  font-size: 1.2rem;
+}
+.record-info__text{
+  overflow-y: scroll;
+  width: 40vw;
+  color:white;
+  margin: var(--margin);
+  font-weight: 400;
+  font-family: "Neue Haas Grotesk Text Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.record-info__text::-webkit-scrollbar {
+  display: none;
+}
+
+.record-info__text {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+
+.close_record-info{
+  position: absolute;
+  top:40px;
+  right:20px;
+  background:transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url('./public/images/cross-sign.png');
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+  filter: invert();
+}

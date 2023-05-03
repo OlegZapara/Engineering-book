@@ -1,0 +1,43 @@
+@media screen and (max-width: 1000px) {
+    .entry{
+        margin-bottom: 250px;
+    }
+    .record{
+        margin-bottom: 20px;
+    }
+    .record:nth-child(odd){
+        height: auto;
+        flex-direction: column;
+    }
+    .record:nth-child(even){
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    .trigger{
+        top:15%;
+        height: 70%;
+    }
+    .text{
+        width: calc(50vw + 150px);
+        margin:var(--margin);
+        margin-top: 60px;
+    }
+    .text__additional{
+        margin-left: 0;
+    }
+
+    .record-info{
+        flex-direction: column;
+    }
+    .record-info__text{
+        width: min(100vh, 100vw);
+    }
+    .record-info__image-wrapper{
+        margin-top: 100px;
+        width: 100%;
+        flex-direction: row;
+    }
+    .close_record-info{
+        top:60px;
+    }
+}
