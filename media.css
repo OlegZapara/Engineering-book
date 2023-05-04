@@ -42,8 +42,7 @@
         grid-auto-flow: column;
         overflow-x: scroll;
         overflow-y: hidden;
-        background-color: #000000;
-        background-color: #000000;
+        background-color: black;
         opacity: 1;
         background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 10px ), repeating-linear-gradient( #1c1c1c55, #1c1c1c );
     }
