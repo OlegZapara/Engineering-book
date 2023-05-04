@@ -1,6 +1,6 @@
 @media screen and (max-width: 1000px) {
     .entry{
-        margin-bottom: 250px;
+        margin-bottom: 100px;
     }
     .record{
         margin-bottom: 20px;
@@ -35,7 +35,17 @@
     .record-info__image-wrapper{
         margin-top: 100px;
         width: 100%;
-        flex-direction: row;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .record-info__image{
+        width: 320px;
+        height: 320px;
+        margin-right: calc(100vw - 350px);
     }
     .close_record-info{
         top:60px;
@@ -43,12 +53,13 @@
 }
 
 @media screen and (max-width: 600px){
-    html{
-        overflow-x: hidden;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+    .entry{
+        height:150px;
+        object-fit: cover;
+        overflow: hidden;
     }
-        html::-webkit-scrollbar {
-        display: none;
+    .entry__image2{
+        height: 600px;
+        width: 600px;
     }
 }

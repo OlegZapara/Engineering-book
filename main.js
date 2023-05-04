@@ -24,19 +24,31 @@ for(let button of closeButtons){
 }
 
 function toggleInfo(e){
-  e.target.parentElement.parentElement.querySelector('.record-info').scrollIntoView({block: "center", behaviour:"smooth"})
-  e.target.parentElement.parentElement.parentElement.classList.add('enableBlur')
-  e.target.parentElement.parentElement.querySelector('.record-info').classList.add('show-info')
-  e.target.parentElement.parentElement.querySelector('.record-info').classList.add('disableBlur')
 
-  document.querySelector('body').style.height = '100%'
+  let wrapper = document.getElementById('info-wrapper')
+  wrapper.style.display = 'flex'
+
+  let background = document.querySelector('.wrapper')
+  background.classList.add('enableBlur')
+
+  let record_info = e.target.parentElement.parentElement.querySelector('.record-info')
+  let copy = record_info.cloneNode(true)
+  copy.classList.add('show-info')
+  copy.querySelector('.close_record-info').addEventListener('click', close)
+  wrapper.appendChild(copy)
+
+  document.querySelector('body').style.height = '100vh'
   document.querySelector('body').style.overflowY = 'hidden'
 
 }
 
 function close(e){
-  e.target.parentElement.parentElement.parentElement.parentElement.classList.remove('enableBlur')
-  e.target.parentElement.parentElement.classList.remove('show-info')
+  let wrapper  = document.getElementById("info-wrapper")
+  wrapper.replaceChildren()
+  wrapper.style.display = "none"
+
+  let background = document.querySelector('.wrapper')
+  background.classList.remove('enableBlur')
 
   document.querySelector('body').style.height = 'auto'
   document.querySelector('body').style.overflowY = 'scroll'
