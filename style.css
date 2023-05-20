@@ -124,6 +124,7 @@ body{
 }
 .text__overlay{
   position: absolute;
+  display: block;
   opacity: 1;
   top:0;
   background-color: white;
@@ -187,7 +188,7 @@ body{
 
 .show .text__overlay{
   transform: translateY(100%);
-  opacity: 0;
+  display: none;
 }
 
 
