@@ -9,9 +9,39 @@ const observer = new IntersectionObserver((entries) => {
   })
 })
 
+const authorObserver = new IntersectionObserver((authors) => {
+  authors.forEach((author) => {
+    if(author.isIntersecting){
+      author.target.parentElement.classList.add('author-show')
+    }
+    else{
+      author.target.parentElement.classList.remove('author-show')
+    }
+    
+  })
+})
+function max(a, b){
+  if(a > b){
+    return a;
+  }
+  else{
+    return b;
+  }
+}
+window.addEventListener('scroll', function(){
+  if(this.window.innerWidth < 1300) return;
+  var scrollTop = this.scrollY / 1000;
+  console.log(scrollTop);
+  console.log(this.window.innerHeight)
+  var el = document.getElementById('authors-overlay');
+  el.style.opacity = `${max(scrollTop - this.window.innerHeight / 800, 0)}`;
+})
 
 const hiddenElements = document.querySelectorAll('.trigger')
 hiddenElements.forEach((el) => observer.observe(el))
+
+const authors = document.querySelectorAll('.author-trigger')
+authors.forEach((el) => authorObserver.observe(el))
 
 const buttons = document.getElementsByClassName('text__additional')
 for(let button of buttons){

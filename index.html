@@ -16,15 +16,39 @@
 
     <section class="entry">
       <div class="entry__image-wrapper">
-        <img class = "entry__image1" src="./public/images/GENIUS_Ukraine_Logo_Website_sized(1).png">
-        <img class = "entry__image2" src="./public/images/GettyImages-1206796363-scaled.jpg">
-        <!-- <div class = "name">SAVE THE PLANET</div>
-        <div class = "author1">OLEG ZAPARA</div>
-        <div class = "author2">EGOR SHCHASNY</div> -->
+        <img class = "entry__image1 parallax" src="./public/images/GENIUS_Ukraine_Logo_Website_sized(1).png">
+        <img class = "entry__image2 parallax" src="./public/images/GettyImages-1206796363-scaled.jpg">
       </div>
     </section>
+    <section class="authors">
+      <div class="authors-overlay" id="authors-overlay"></div>
+      <div class="authors-header">Project created by</div>
+      <div class="author-wrapper author-hidden">
+        <div class="author-name">Oleg Zapara</div>
+        <div class="author-image-wrapper">
+          <img class="author-image" src="./public/images/OlegZapara.jpg">
+        </div>
+        <div class="author-description">Software developer & engineer</div>
+        <div class="author-trigger author1-trigger"></div>
+      </div>
 
+      <div class="author-wrapper author-hidden">
+        <div class="author-name">Egor Shchasny</div>
+        <div class="author-image-wrapper">
+          <img class="author-image" src="./public/images/EgorShchasny.jpg">
+        </div>
+        <div class="author-description">Robot operator & engineer</div>
+        <div class="author-trigger author2-trigger"></div>
+      </div>
+
+    </section>
+
+    
     <section class="wrapper">
+      <div class="development-header hidden">
+        <span>Project development stages</span>
+        <span class="trigger"  id="development-header"></span>
+      </div>
       <!-- 1 -->
       <div class="record hidden">
         <span class="trigger"></span>

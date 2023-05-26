@@ -7,6 +7,9 @@
   margin:0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
   overflow-x: hidden;
   /* -ms-overflow-style: none;
@@ -19,6 +22,12 @@ body{
 
 .entry{
   height: 100vh;
+}
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .entry__image-wrapper{
   position: relative;
@@ -34,6 +43,11 @@ body{
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+section{
+  position: sticky !important;
+  background-color: white;
+  top:0px;
 }
 /* .name{
   font-size: calc(var(--index) * 3 + 2vw);
@@ -65,6 +79,92 @@ body{
   font-weight: 600;
   color:white;
 } */
+.authors-header{
+  width: 100%;
+  text-align: center;
+  margin-top:50px;
+  margin-bottom: 60px;
+  font-size: calc(3.5 * var(--index));
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  height: 100px;
+}
+.authors{
+  width: 100%;
+  min-height: 120vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.author-wrapper{
+  position: relative;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin:20px calc(5 * var(--index));
+}
+.author-name{
+  text-align: center;
+  font-size: calc(2.5*var(--index));
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  height: 120px;
+  margin-bottom: 15px;
+}
+.author-description{
+  text-align: center;
+  font-size: calc((var(--index)));
+  font-family: 'Roboto', sans-serif;
+  width: 75%;
+  margin-top: 15px;
+  height: 80px;
+}
+.author-image-wrapper{
+  height: 80%;
+}
+.author-image{
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border:1px solid lightgray;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.author-show{
+  opacity: 1 !important;
+  transform: translate(0px) !important;
+}
+.author-hidden{
+  opacity: 0;
+  transition: 0.5s all;
+  transform: translateX(100px);
+}
+
+.author1-trigger{
+  position: absolute;
+  top:50%;
+  width: 100%;
+}
+.author2-trigger{
+  position: absolute;
+  top:75%;
+  width: 100%;
+}
+.authors-overlay{
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 2;
+}
+
 
 
 .footer{
@@ -84,6 +184,22 @@ body{
   z-index: 2;
 }
 
+.development-header{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top:100px;
+  margin-bottom: 80px;
+  position: relative;
+  font-size: calc(3.5 * var(--index));
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+}
+#development-header{
+  position: absolute;
+  width: 100%;
+  top:250px;
+}
 .wrapper{
   display: flex;
   flex-direction: column;
