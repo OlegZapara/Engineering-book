@@ -31,8 +31,6 @@ function max(a, b){
 window.addEventListener('scroll', function(){
   if(this.window.innerWidth < 1300) return;
   var scrollTop = this.scrollY / 1000;
-  console.log(scrollTop);
-  console.log(this.window.innerHeight)
   var el = document.getElementById('authors-overlay');
   el.style.opacity = `${max(scrollTop - this.window.innerHeight / 800, 0)}`;
 })
