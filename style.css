@@ -108,6 +108,40 @@ section{
   position: sticky !important;
   background-color: white;
   top:0px;
+  border-top:2px solid black;
+}
+
+.game{
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-wrapper{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border:2px solid black;
+  padding:50px;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.game-title{
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: calc(3.5 * var(--index));
+  text-align: center;
+  margin-bottom: 50px;
+}
+.game-description{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: calc(var(--index));
+  width: 80%;
+  text-align: justify;
 }
 
 .authors-header{
@@ -163,7 +197,7 @@ section{
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
-  border:1px solid lightgray;
+  border:2px solid black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 

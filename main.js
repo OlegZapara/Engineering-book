@@ -28,12 +28,12 @@ function max(a, b){
     return b;
   }
 }
-window.addEventListener('scroll', function(){
-  if(this.window.innerWidth < 1300) return;
-  var scrollTop = this.scrollY / 1000;
-  var el = document.getElementById('authors-overlay');
-  el.style.opacity = `${max(scrollTop - this.window.innerHeight / 800, 0)}`;
-})
+// window.addEventListener('scroll', function(){
+//   if(this.window.innerWidth < 1300) return;
+//   var scrollTop = this.scrollY / 1000;
+//   var el = document.getElementById('authors-overlay');
+//   el.style.opacity = `${max(scrollTop - this.window.innerHeight / 400, 0)}`;
+// })
 
 const hiddenElements = document.querySelectorAll('.trigger')
 hiddenElements.forEach((el) => observer.observe(el))
