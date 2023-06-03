@@ -66,12 +66,23 @@
 
 @media screen and (max-width: 600px){
     .entry{
-        height:150px;
+        height: 250px;
         object-fit: cover;
         overflow: hidden;
     }
+    .custom-shape-divider-top-1685801030{
+        opacity: 1;
+    }
     .entry__image2{
-        height: 600px;
-        width: 600px;
+        width: 100%;
+    }
+    .project-name{
+        font-size: 2rem;
+    }
+    .project-description{
+        font-size: 1rem;
+    }
+    .scroll-label{
+        display: none;
     }
 }
