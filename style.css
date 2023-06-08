@@ -465,3 +465,22 @@ scrollbar-width: none;
   background-size: contain;
   /* filter: invert(); */
 }
+
+
+#ino-download{
+  background-color: #3186a0;
+  color:white;
+  text-decoration: none;
+  padding:10px;
+  border:2px solid black;
+  border-radius: 15px;
+  margin-right: 15px;
+}
+#txt-download{
+  background-color: grey;
+  text-decoration: none;
+  color:white;
+  padding:10px;
+  border:2px solid black;
+  border-radius: 15px;
+}
